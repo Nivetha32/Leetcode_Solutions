@@ -1,17 +1,20 @@
 class Solution {
     public int numberOfBeams(String[] bank) {
-        int prev =0, an =0;
-        for(String ro : bank)
-        {
-            int cu =0;
-            for(char c : ro.toCharArray())
-              if(c == '1') cu++;
-            if(cu >0)
+       int prev = 0;
+       int total = 0;
+       for(String r : bank)
+       {
+       int cur=0;
+           for(char ch : r.toCharArray())
+              {
+                  if(ch =='1') cur++;
+              }
+           if(cur>0)
             {
-                an+=prev *cu;
-                prev = cu;
-            }
-        }
-        return an;
+                total+=prev*cur;
+                prev=cur;
+             }
+       }
+       return total;
     }
 }
