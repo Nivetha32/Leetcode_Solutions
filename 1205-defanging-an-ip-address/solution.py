@@ -1,5 +1,3 @@
-class Solution(object):
-    def defangIPaddr(self, address):
-      return address.replace(".", "[.]")
-
-        
+class Solution:
+    def defangIPaddr(self, address: str) -> str:
+        return address.replace('.','[.]')
