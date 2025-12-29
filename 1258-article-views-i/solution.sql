@@ -1,3 +1,4 @@
-select distinct viewer_id as id from Views
-where author_id = viewer_id
-order by viewer_id  asc;
+select distinct author_id as id from Views
+where viewer_id  = author_id
+order by id ;
+
