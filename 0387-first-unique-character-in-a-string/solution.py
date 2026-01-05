@@ -1,7 +1,8 @@
-class Solution(object):
-    def firstUniqChar(self, s):
-        count = Counter(s)
-        for i, c in enumerate(s):
-         if count[c] == 1:
-          return i
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        k = Counter(s)
+        for i,val in enumerate(s):
+            if k[val]==1:
+                return i
         return -1
+
