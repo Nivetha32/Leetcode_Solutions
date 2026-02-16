@@ -2,7 +2,9 @@ class Solution:
     # @param n, an integer
     # @return an integer
     def reverseBits(self, n):
-        k = bin(n)[2:]
-        k=k.zfill(32)
-        return int(k[::-1],2)
+        m = bin(n)[2:]
+        p = m.zfill(32)
+        l = str(p)[::-1]
+        return int(l,2)
+    
    
