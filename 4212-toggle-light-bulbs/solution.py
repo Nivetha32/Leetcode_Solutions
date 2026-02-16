@@ -1,9 +1,9 @@
 class Solution:
-    def toggleLightBulbs(self, bulbs: list[int]) -> list[int]:
-        l = set()
-        for m in bulbs:
-            if m in l:
-                l.remove(m)
-            else:
-                l.add(m)
-        return sorted(l)
+    def toggleLightBulbs(self, bulbs: list[int]) -> list[int]:  
+        m = Counter(bulbs)
+        p=[]
+        for k,v in m.items():
+            if v%2==1:
+                p.append(k)
+        return sorted(p)
+
